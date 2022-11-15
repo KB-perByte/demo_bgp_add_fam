@@ -1,0 +1,9 @@
+---
+- name: Parse bgp_address_family configulation
+  hosts: ios
+  gather_facts: false
+  tasks:
+    - name: Parse the commands for provided configuration
+      cisco.ios.ios_bgp_address_family:
+        running_config: "{{ lookup('file', 'bgp_add_fam_config.cfg') }}"
+        state: parsed
