@@ -1,6 +1,6 @@
 ---
 - name: Parse bgp_address_family configulation
-  hosts: localhost
+  hosts: ios
   gather_facts: false
   tasks:
     - name: Parse the commands for provided configuration
