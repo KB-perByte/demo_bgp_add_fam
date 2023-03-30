@@ -1,5 +1,6 @@
 ---
-- name: Parse the commands for provided configuration
-  cisco.ios.ios_bgp_address_family:
-    running_config: "{{ lookup('file', 'bgp_add_fam_config.cfg') }}"
-    state: parsed
+tasks:
+- name: Run multiple commands and evaluate the output
+  cisco.ios.ios_command:
+    commands:
+    - show version
