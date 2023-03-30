@@ -1,6 +1,10 @@
 ---
-tasks:
-- name: Run multiple commands and evaluate the output
-  cisco.ios.ios_command:
-    commands:
-    - show version
+- name: Ios interfaces
+  hosts: 35.155.113.92
+  gather_facts: false
+
+  tasks:
+  - name: Run multiple commands and evaluate the output
+    cisco.ios.ios_command:
+      commands:
+      - show version
