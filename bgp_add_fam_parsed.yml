@@ -7,4 +7,4 @@
   - name: Run multiple commands and evaluate the output
     cisco.ios.ios_command:
       commands:
-      - show version
+      - verify /md5 flash:/c8000v-firmware_dreamliner.17.06.01a.SPA.pkg c2bf0564f914a9f6066cf8d3a244c5ac
